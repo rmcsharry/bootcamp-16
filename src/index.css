@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+:root {
+  --font-sans: Space Grotesk;
+  --font-display: ;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply antialiased;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+@layer components {
+  *,
+  ::before,
+  ::after {
+    --tw-ring-color: theme("colors.foreground/0.25");
+    @apply border-neutral-300;
+  }
+}
